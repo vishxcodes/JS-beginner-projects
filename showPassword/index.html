@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>show/unshow Password</title>
+</head>
+<body>
+    <div class="container">
+        <input type="password" class="password" placeholder="Enter Password">
+        <img src="eye-close.png" class="eyebtn" onclick="showPass()">
+    </div>
+
+
+    <script>
+        let eyebtn= document.querySelector(".eyebtn")
+        let password= document.querySelector('.password')
+
+        eyebtn.addEventListener("click", function(){
+            if (password.type == "password") {
+                password.type = "text"
+                eyebtn.src = "eye-open.png"
+            }
+            else{
+                password.type = "password"
+                eyebtn.src = "eye-close.png"
+            }
+        })
+            
+    </script>
+</body>
+</html>
