@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: black;
+}
+.input-box{
+    width: 100%;
+    max-width: 500px;
+    margin: 300px auto;
+    position: relative;
+}
+.input-box input{
+    width: 95%;
+    padding: 20px;
+    border: 2px solid gray;
+    background: none;
+    outline: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 10px;
+}
+.input-box button{
+    position: absolute;
+    right: 0;
+    top: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.input-box button img{
+    width: 50px;
+}
+p{
+    color: white;
+    padding: 10px 0;
+    font-size: 20px;
+    display: none;
+}

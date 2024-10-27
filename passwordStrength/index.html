@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>passwordStrength</title>
+</head>
+<body>
+    <div class="container">
+        <div class="input-box">
+            <input type="password" class="password" placeholder="Enter password">
+            <button><img src="arrow.png"></button>
+            <p class="msg">Password is <span class="strength"></span></p>
+        </div>
+    </div>
+
+    <script>
+        let password = document.querySelector('.password')
+        let msg = document.querySelector('.msg')
+        let strength = document.querySelector('.strength')
+
+        password.addEventListener("input", ()=>{
+            if (password.value.length>0) {
+                msg.style.display="block"
+            }
+            else{
+                msg.style.display= "none"
+            }
+            if (password.value.length<4) {
+                strength.innerHTML= "Weak"
+                password.style.borderColor="red"
+                msg.style.color="red"
+            }
+            else if (password.value.length>=4 && password.value.length<8) {
+                strength.innerHTML= "Medium"
+                password.style.borderColor="yellow"
+                msg.style.color="yellow"
+            }
+            else{
+                strength.innerHTML= "Strong"
+                password.style.borderColor="green"
+                msg.style.color="green"
+            }
+        })
+    </script>
+</body>
+</html>
