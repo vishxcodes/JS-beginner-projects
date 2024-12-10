@@ -13,8 +13,8 @@ function createPassword() {
     password+= lowerCase[Math.floor(Math.random()*lowerCase.length)]
     password+= number[Math.floor(Math.random()*number.length)]
     password+= symbol[Math.floor(Math.random()*symbol.length)]
-
-    while (length>password.length) {
+    
+    while(length>password.length) {
         password+= allChar[Math.floor(Math.random()*allChar.length)]
     }
     passwordBox.value=password;

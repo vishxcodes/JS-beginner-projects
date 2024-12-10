@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Number</title>
+    <style>
+        body{
+            background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+            font-family: sans-serif;
+            width: 100vw;
+            height: 100vh;
+        }
+        #heading{
+            font-weight: 900;
+            color: purple;
+            text-shadow: 
+                -4px -1px 0 black,
+                1px -1px 0 black, 
+                -1px 1px 0 black, 
+                1px 1px 0 black;
+            font-size: 50px;
+        }
+        form{
+            min-height: 100px;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .inputNum{
+            margin: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+        }
+        .inputNum:hover{
+            border-color:2px solid #001328; /* Change border color on hover */
+            box-shadow: 0 0 10px rgba(55, 0, 255, 0.8);
+        }
+        .update{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 20px;
+        }
+        .prevGuesses{
+            margin: 10px;
+        }
+        .remainingGuesses{
+            margin: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading">Guess the Number!</h1>
+        <h3>"Guess The Number" is fun game where you have to guess a number between 1 to 100. You get 10 attempts to guess, so make every attempt count ;)</h3>
+        <form>
+            <h2>Guess the Number</h2>
+            <input class="inputNum">
+            <p class="warning"></p>
+            <input class="submit" type="submit">
+        </form>
+    </div>
+
+    <div class="update">
+        <div class="prevGuesses">Previous Guesses: <span class="allGuesses"></span> </div>
+        <div class="remainingGuesses">Remaining Guesses: <span class="lastGuess">10</span> </div>
+        <div class="LowOrHigh"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Switch</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        h2{
+            color: white;
+        }
+        .container{
+            display: flex;
+        }
+        #green{
+            height: 100px;
+            width: 100px;
+            background-color: green;
+            border: 2px solid white;
+            margin: 10px;
+        }
+        #yellow{
+            height: 100px;
+            width: 100px;
+            background-color: yellow;
+            border: 2px solid white;
+            margin: 10px;
+        }
+        #blue{
+            height: 100px;
+            width: 100px;
+            background-color: blue;
+            border: 2px solid white;
+            margin: 10px;
+        }
+        #grey{
+            height: 100px;
+            width: 100px;
+            background-color: grey;
+            border: 2px solid white;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Choose any color to change Background !!</h2>
+    <div class="container">
+        <div class="button" id = "grey"></div>
+        <div class="button" id="yellow"></div>
+        <div class="button" id="blue"></div>
+        <div class="button" id="green"></div>
+    </div>
+
+
+    <script>
+        const btns = document.querySelectorAll('.button')
+        const body = document.querySelector('body')
+
+        btns.forEach( function (e){
+            console.log(e)
+            e.addEventListener('click', function (clk){
+                console.log(clk)
+                console.log(clk.target)
+                if(clk.target.id === 'grey'){
+                    body.style.backgroundColor = clk.target.id
+                }
+                if(clk.target.id === 'yellow'){
+                    body.style.backgroundColor = clk.target.id
+                }
+                if(clk.target.id === 'blue'){
+                    body.style.backgroundColor = clk.target.id
+                }
+                if(clk.target.id === 'green'){
+                    body.style.backgroundColor = clk.target.id
+                }
+            })
+        })
+    </script>
+</body>
+</html>
